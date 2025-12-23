@@ -12,7 +12,7 @@ async function getIndustryDetail(code: string) {
 export default async function IndustryDetailPage({
   params,
 }: {
-  params: { code: string };
+  params: Promise<{ code: string }>;
 }) {
   const { code } = await params;
   const data = await getIndustryDetail(code);

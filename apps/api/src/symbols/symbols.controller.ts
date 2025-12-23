@@ -11,6 +11,7 @@ export class SymbolsController {
       market: symbol.endsWith('.HK') ? 'HK' : 'A',
       industry: { code: '801080', name: '电子', cycle_flag: false },
       prev_close: { price: 386.5, date: '2025-12-19' },
+      has_unreviewed_event: symbol === '002371.SZ', // ✅ 新增
       tabs: [
         {
           style_id: 'dividend_cashflow',
